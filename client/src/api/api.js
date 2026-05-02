@@ -8,7 +8,7 @@ const updateLoading = () => {
 };
 
 const api = axios.create({
-  baseURL: "https://daily-queue-management-system.onrender.com"
+  baseURL: "https://daily-queue-management-system.onrender.com/api"
 });
 
 api.interceptors.request.use((config) => {
