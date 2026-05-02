@@ -1,0 +1,19 @@
+{
+  "name": "smart-digital-queue-management-system",
+  "version": "1.0.0",
+  "description": "MERN monorepo for Smart Digital Queue Management System with RBAC and relationship approval.",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "pnpm": "^10.33.2"
+  }
+}
