@@ -21,6 +21,11 @@ const hasRealEmailConfig = () => {
   );
 };
 
+const transporter = createTransporter();
+
+await transporter.verify();
+console.log("SMTP Connected Successfully");
+
 export const sendOtpEmail = async ({ to, name, otp, purpose }) => {
   if (!hasRealEmailConfig()) {
     console.log(`[Email OTP Demo] ${purpose} OTP for ${to}: ${otp}`);
